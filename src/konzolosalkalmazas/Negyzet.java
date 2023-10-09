@@ -12,20 +12,28 @@ public class Negyzet {
     }
 
     public int getOldala() {
+        if(oldala < 1){
+            oldala = 1;
+        }
         return oldala;
     }
 
-    public int getX() {
-        return X;
+    public void getX(int X) {
+        this.X = X;
     }
 
-    public int getY() {
-        return Y;
+    public void getY(int Y) {
+        this.Y = Y;
     }
 
     private int terulete(){
         int ter = oldala*oldala;
         return ter;
+    }
+
+    public int setOldala(int oldala) {
+        this.oldala = oldala;
+        return oldala;
     }
     
     
