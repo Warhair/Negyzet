@@ -2,12 +2,16 @@ package konzolosalkalmazas;
 
 public class Negyzet {
 
-    private Kordinata kord = new Kordinata();
+    private Kordinata kord = new Kordinata(0, 0);
     private int oldala;
 
     public Negyzet(int oldala) {
         this.oldala = oldala;
-        
+    }
+    
+    public Negyzet(int oldala, Kordinata kord) {
+        setOldala(oldala);
+        this.kord = kord;
     }
     
     @Override

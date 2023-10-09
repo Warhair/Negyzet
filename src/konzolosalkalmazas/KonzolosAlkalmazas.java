@@ -8,12 +8,7 @@ public class KonzolosAlkalmazas {
     }
 
     private static void jatek() {
-        Negyzet negyzet = new Negyzet();
-        Kordinata kord = new Kordinata();
-        kord.setX(100);
-        kord.setY(50);
-        negyzet.setOldala(4);
-        negyzet.setKord(kord);
+        Negyzet negyzet = new Negyzet(2, new Kordinata(20, 30));
         System.out.println(negyzet.toString());
     }
 
