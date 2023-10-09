@@ -1,41 +1,39 @@
-
 package konzolosalkalmazas;
 
 public class Negyzet {
-    private int oldala;
-    private int X;
-    private int Y;
 
+    private Kordinata kord = new Kordinata();
+    private int oldala;
+
+    public Negyzet(int oldala) {
+        this.oldala = oldala;
+        
+    }
+    
     @Override
     public String toString() {
-        return "Negyzet{" + "oldala=" + oldala + ", X=" + X + ", Y=" + Y + "területe:" + terulete() + '}';
+        return "Negyzet{" + "oldala=" + oldala + ", X=" + kord.getX() + ", Y=" + kord.getY() + ", területe:" + terulete() + '}';
     }
 
     public int getOldala() {
-        if(oldala < 1){
-            oldala = 1;
-        }
         return oldala;
     }
 
-    public void getX(int X) {
-        this.X = X;
-    }
-
-    public void getY(int Y) {
-        this.Y = Y;
-    }
-
-    private int terulete(){
-        int ter = oldala*oldala;
+    private int terulete() {
+        int ter = oldala * oldala;
         return ter;
     }
 
-    public int setOldala(int oldala) {
+    public void setOldala(int oldala) {
         this.oldala = oldala;
-        return oldala;
+        if (oldala < 1) {
+            oldala = 1;
+        }
+        this.oldala = oldala;
     }
-    
-    
-    
+
+    public void setKord(Kordinata kord) {
+        this.kord = kord;
+    }
+
 }

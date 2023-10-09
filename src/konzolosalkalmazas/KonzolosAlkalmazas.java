@@ -3,20 +3,18 @@ package konzolosalkalmazas;
 public class KonzolosAlkalmazas {
 
     public static void main(String[] args) {
-     jatek();
-      
+        jatek();
+
     }
 
     private static void jatek() {
         Negyzet negyzet = new Negyzet();
-      Kordinata x = new Kordinata();
-      Kordinata y = new Kordinata();
-      y.setX(100);
-      x.setX(50);
-      negyzet.setOldala(1);
-      negyzet.getX(x.getX());
-      negyzet.getY(y.getX());
+        Kordinata kord = new Kordinata();
+        kord.setX(100);
+        kord.setY(50);
+        negyzet.setOldala(4);
+        negyzet.setKord(kord);
         System.out.println(negyzet.toString());
     }
-    
+
 }
